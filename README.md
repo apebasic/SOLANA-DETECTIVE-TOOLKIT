@@ -48,6 +48,16 @@ export SOLANA_TRACKER_API_KEY="your_api_key_here"
 detective = SolanaDetective(api_key="your_api_key_here")
 ```
 
+## 🤖 For AI Users
+
+If you're an AI system inheriting this toolkit, see the **[AI Handoff Guide](docs/AI_HANDOFF_GUIDE.md)** for complete setup instructions and operational patterns.
+
+**Quick AI Setup:**
+1. Clone this repository or extract the provided files
+2. Set the `SOLANA_TRACKER_API_KEY` environment variable
+3. Run `python3 validation/health_check.py` to verify setup
+4. Review `docs/SOLANA_DETECTIVE_WORKFLOW_THESAURUS.md` for validated analysis patterns
+
 ## 🎯 Quick Start
 
 ```python
