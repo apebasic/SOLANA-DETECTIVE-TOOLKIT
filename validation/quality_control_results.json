@@ -1,0 +1,57 @@
+{
+  "endpoint_coverage": {
+    "coverage_percentage": 95.45454545454545,
+    "expected_count": 44,
+    "covered_count": 42,
+    "missing_endpoints": [
+      "GET /tokens/trending/{timeframe}",
+      "GET /tokens/volume/{timeframe}"
+    ],
+    "extra_endpoints": [],
+    "passed": true
+  },
+  "method_signatures": {
+    "method_count": 38,
+    "documented_count": 38,
+    "documentation_percentage": 100.0,
+    "issues": [
+      "Token method missing 'token' parameter: get_token_wallet_trades",
+      "Token method missing 'token' parameter: get_tokens_by_pool",
+      "Token method missing 'token' parameter: get_tokens_by_volume",
+      "Token method missing 'token' parameter: get_tokens_multi",
+      "Token method missing 'token' parameter: get_tokens_multi_all",
+      "Token method missing 'token' parameter: get_tokens_multi_graduated"
+    ],
+    "passed": false
+  },
+  "error_handling": {
+    "error_patterns": {
+      "try_except_blocks": 3,
+      "custom_exceptions": 14,
+      "input_validation": 30,
+      "timeout_handling": true,
+      "retry_logic": true,
+      "rate_limiting": true
+    },
+    "score": 100,
+    "passed": true
+  },
+  "configuration": {
+    "features": [
+      "environment_variables",
+      "default_config",
+      "file_based_config",
+      "validation",
+      "api_key_handling"
+    ],
+    "score": 100.0,
+    "passed": true
+  },
+  "overall": {
+    "score": 98.86363636363636,
+    "pass_rate": 75.0,
+    "quality_level": "EXCELLENT",
+    "passed_checks": 3,
+    "total_checks": 4
+  }
+}

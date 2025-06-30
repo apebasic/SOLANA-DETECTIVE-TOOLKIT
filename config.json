@@ -1,0 +1,15 @@
+{
+  "api_key": "d69a0997-86cb-4a69-8f0b-c3435a11b45b",
+  "min_frequency": 2,
+  "min_consistency": 0.3,
+  "max_time_window_days": 180,
+  "frequency_weight": 0.5,
+  "timing_weight": 0.3,
+  "volume_weight": 0.2,
+  "exclude_addresses": [
+    "11111111111111111111111111111111",
+    "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "So11111111111111111111111111111111111111112"
+  ]
+}
+

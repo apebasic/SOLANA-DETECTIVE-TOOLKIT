@@ -1,0 +1,38 @@
+{
+  "endpoint_coverage": {
+    "total_endpoints": 47,
+    "covered_endpoints": 47,
+    "coverage_percentage": 100.0,
+    "missing_endpoints": [],
+    "status": "PASS"
+  },
+  "method_implementation": {
+    "validated_methods": 6,
+    "total_checked": 6,
+    "validation_errors": [
+      "get_token_price: Missing parameters ['priceChanges']",
+      "get_chart_data: Missing parameters ['type', 'marketCap', 'removeOutliers']"
+    ],
+    "status": "FAIL"
+  },
+  "parameter_accuracy": {
+    "expected_intervals": 18,
+    "found_intervals": 18,
+    "missing_intervals": [],
+    "extra_intervals": [],
+    "has_1m_1mn_distinction": true,
+    "status": "PASS"
+  },
+  "response_format": {},
+  "documentation_consistency": {
+    "files_checked": 5,
+    "total_files": 5,
+    "consistency_issues": [],
+    "status": "PASS"
+  },
+  "orthography_check": {
+    "orthography_issues": [],
+    "status": "PASS"
+  },
+  "overall_score": 91.66666666666666
+}

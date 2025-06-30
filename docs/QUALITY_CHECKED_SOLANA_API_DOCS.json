@@ -1,0 +1,1220 @@
+{
+  "base_url": "https://data.solanatracker.io",
+  "authentication": "x-api-key header required",
+  "total_endpoints": 44,
+  "extraction_timestamp": 1751092056.9592824,
+  "endpoints": {
+    "GET /tokens/{tokenAddress}": {
+      "endpoint": "GET /tokens/{tokenAddress}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokenstokenaddress",
+      "method": "GET",
+      "path": "/tokens/{tokenAddress}",
+      "description": "Retrieves comprehensive information about a specific token.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "tokenAddress",
+          "type": "string",
+          "description": "The tokenAddress identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"token\":{\n\"name\":\"OFFICIAL TRUMP\",\n\"symbol\":\"TRUMP\",\n\"mint\":\"6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN\",\n\"uri\":\"https://arweave.net/cSCP0h2n1crjeSWE9KF-XtLciJalDNFs7Vf-Sm0NNY0\",\n\"decimals\":6,\n\"description\":\"\",\n\"image\":\"https://image.solanatracker.io/proxy?url=https%3A%2F%2Farweave.net%2FVQrPjACwnQRmxdKBTqNwPiyo65x7LAT773t8Kd7YBzw\",\n\"hasFileMetaData\":true,\n\"strictSocials\":{",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/by-pool/{poolAddress}": {
+      "endpoint": "GET /tokens/by-pool/{poolAddress}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokensbypoolpooladdress",
+      "method": "GET",
+      "path": "/tokens/by-pool/{poolAddress}",
+      "description": "",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "poolAddress",
+          "type": "string",
+          "description": "The poolAddress identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/{tokenAddress}/holders": {
+      "endpoint": "GET /tokens/{tokenAddress}/holders",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokenstokenaddressholders",
+      "method": "GET",
+      "path": "/tokens/{tokenAddress}/holders",
+      "description": "Gets the top 100 holders for a specific token and the total amount",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "tokenAddress",
+          "type": "string",
+          "description": "The tokenAddress identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"total\":651343,\n\"accounts\":[\n{\n\"wallet\":\"2RH6rUTPBJ9rUDPpuV9b8z1YL56k1tYU6Uk5ZoaEFFSK\",\n\"amount\":800000022.564,\n\"value\":{\n\"quote\":8134085180.01063,\n\"usd\":8134085180.01063\n},\n\"percentage\":80.00004595161334\n},\n{\n\"wallet\":\"9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM\",\n\"amount\":25151426.025001,\n\"value\":{\n\"quote\":255729794.894759,\n\"usd\":255729794.894759\n},\n\"percentage\":2.5151439762462187\n},\n{\n\"wallet\":\"C68a6RCGLiPskbPYtAcsCjhG8tfTWYcoB4JjCrXFdqyo\",\n\"amount\":15978104.518764,\n\"value\":{\n\"quote\":162459074.3812657,\n\"usd\":162459074.3812657\n},\n\"percentage\":1.5978113245847323\n},\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/{tokenAddress}/holders/top": {
+      "endpoint": "GET /tokens/{tokenAddress}/holders/top",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokenstokenaddressholderstop",
+      "method": "GET",
+      "path": "/tokens/{tokenAddress}/holders/top",
+      "description": "Gets the top 20 holders for a token.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "tokenAddress",
+          "type": "string",
+          "description": "The tokenAddress identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"address\": \"FwbBBzAfBgGaAWjEG4nprZQ8mp8w2W3eHLxAWbyUnwXR\",\n\"amount\": 114837224.78981262,\n\"percentage\": 12.897608531935292,\n\"value\": {\n\"quote\": 364.490083024,\n\"usd\": 80016.91106116588\n}\n},\n{\n\"address\": \"Cst5bqk7QJAj1tR7qH9eiYnT7ygDEashKYTFvV1obRGK\",\n\"amount\": 27748733.327190395,\n\"percentage\": 3.116518187950125,\n\"value\": {\n\"quote\": 88.07368980529128,\n\"usd\": 19334.914534601114\n}\n}\n]",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/{tokenAddress}/ath": {
+      "endpoint": "GET /tokens/{tokenAddress}/ath",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokenstokenaddressath",
+      "method": "GET",
+      "path": "/tokens/{tokenAddress}/ath",
+      "description": "Retrieves the all-time high price of a token (since the data API started recording).",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "tokenAddress",
+          "type": "string",
+          "description": "The tokenAddress identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"highest_price\": 0.002399892080590551,\n\"timestamp\": 171924662484\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /deployer/{wallet}": {
+      "endpoint": "GET /deployer/{wallet}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-deployerwallet",
+      "method": "GET",
+      "path": "/deployer/{wallet}",
+      "description": "Retrieves all tokens created by a specific wallet with pagination support.",
+      "query_parameters": [
+        {
+          "name": "page",
+          "type": "integer",
+          "description": "Page number (default: 1)",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "integer",
+          "description": "Number of items per page (default: 250, max: 500)",
+          "required": false
+        }
+      ],
+      "path_parameters": [
+        {
+          "name": "wallet",
+          "type": "string",
+          "description": "The wallet identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"total\": 2,\n\"tokens\": [\n{\n\"name\": \"OFFICIAL TRUMP\",\n\"symbol\": \"TRUMP\",\n\"mint\": \"6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN\",\n\"image\": \"https://image.solanatracker.io/proxy?url=https%3A%2F%2Farweave.net%2FVQrPjACwnQRmxdKBTqNwPiyo65x7LAT773t8Kd7YBzw\",\n\"decimals\": 6,\n\"hasSocials\": false,\n\"poolAddress\": \"7noYm8BxkbFhe3R37qfaE6vfzoJN4ZhQoWwcLpJPdZyw\",\n\"liquidityUsd\": 534.4163492557315,\n\"marketCapUsd\": 0,\n\"priceUsd\": 0,\n\"lpBurn\": 0,\n\"market\": \"meteora-dlmm\",\n\"freezeAuthority\": null,\n\"mintAuthority\": null,\n\"createdAt\": 0,\n\"lastUpdated\": 1741634697371,\n\"buys\": 0,\n\"sells\": 0,\n\"totalTransactions\": 0\n},\n{\n\"name\": \"DUNA\",\n\"symbol\": \"DUNA\",\n\"mint\": \"9umkdJdE555ZFMyYbi1AXK2VC2Ge6qUwuLH6bwXPpump\",\n\"image\": \"https://image.solanatracker.io/proxy?url=https%3A%2F%2Fipfs.io%2Fipfs%2FQmPxDiTa5SogsT8SsF5Zq3wKaf6HrcDBbbTuKzALQFQPNg\",\n\"decimals\": 6,\n\"hasSocials\": false,\n\"poolAddress\": \"DyVWcQE7vhPXa6TPoC9DRB7dZLimoSKYSYezW1W4wJD6\",\n\"liquidityUsd\": 0,\n\"marketCapUsd\": 0,\n\"priceUsd\": 0,\n\"lpBurn\": 0,\n\"market\": \"meteora-dlmm\",\n\"freezeAuthority\": null,\n\"mintAuthority\": null,\n\"createdAt\": 0,\n\"lastUpdated\": 1741650596208,\n\"buys\": 0,\n\"sells\": 0,\n\"totalTransactions\": 0\n}\n]\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /search": {
+      "endpoint": "GET /search",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-search",
+      "method": "GET",
+      "path": "/search",
+      "description": "The /search endpoint provides a flexible search interface for pools and tokens with comprehensive filtering options and pagination.",
+      "query_parameters": [
+        {
+          "name": "query",
+          "type": "string",
+          "description": "Search query for tokens",
+          "required": true
+        },
+        {
+          "name": "limit",
+          "type": "integer",
+          "description": "Number of results to return",
+          "required": false
+        }
+      ],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"status\": \"success\",\n\"data\": [\n{\n\"name\": \"OFFICIAL TRUMP\",\n\"symbol\": \"TRUMP\",\n\"mint\": \"6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN\",\n\"decimals\": 6,\n\"image\": \"https://image.solanatracker.io/proxy?url=https%3A%2F%2Farweave.net%2FVQrPjACwnQRmxdKBTqNwPiyo65x7LAT773t8Kd7YBzw\",\n\"holders\": 651267,\n\"jupiter\": true,\n\"verified\": true,\n\"liquidityUsd\": 360839586.0312104,\n\"marketCapUsd\": 9966765318.964148,\n\"priceUsd\": 9.966770767653129,\n\"lpBurn\": 0,\n\"market\": \"meteora-dlmm\",\n\"freezeAuthority\": null,\n\"mintAuthority\": null,\n\"poolAddress\": \"9d9mb8kooFfaD3SctgZtkxQypkshx6ezhbKio89ixyy2\",\n\"totalBuys\": 96999,\n\"totalSells\": 93415,\n\"totalTransactions\": 190414,\n\"volume_5m\": 0,\n\"volume\": 1053453008.146068,\n\"volume_15m\": 59157,\n\"volume_30m\": 514425,\n\"volume_1h\": 777545,\n\"volume_6h\": 6025120,\n\"volume_12h\": 11831342,\n\"volume_24h\": 14501603,\n\"tokenDetails\": {\n\"creator\": \"HArYFfZtxEA6peDZkvrC68RY6wZ1PyLGrg8y55nRWupy\",\n\"tx\": \"3frR9DTRSVpxtKhey8cqF928jwbEH71rBAYjtziqY6MpE3SzQrnRv6xTbjQZpTEHrzzz9upJcDgTNE2Vp4KzMEuz\",\n\"time\": 1745532570\n}\n}\n]\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/latest": {
+      "endpoint": "GET /tokens/latest",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokenslatest",
+      "method": "GET",
+      "path": "/tokens/latest",
+      "description": "Retrieves the latest 100 tokens.",
+      "query_parameters": [
+        {
+          "name": "page",
+          "type": "integer",
+          "description": "Page number (default: 1)",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "integer",
+          "description": "Number of items per page (default: 250, max: 500)",
+          "required": false
+        }
+      ],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"token\": {\n\"name\": \"April Fool’s Day\",\n\"symbol\": \"FOOLS\",\n\"mint\": \"DWKaYT4omXcZeDiaAUoJfBMhDK7DDQTymusKohsGpump\",\n\"uri\": \"https://ipfs.io/ipfs/QmWR8ah9MmciD3ErUJDb9csfRoyFHTT5Lves2zSnqXPeYz\",\n\"decimals\": 6,\n\"hasFileMetaData\": true,\n\"createdOn\": \"https://pump.fun\",\n\"description\": \"It’s a celebration!\",\n\"image\": \"https://image.solanatracker.io/proxy?url=https%3A%2F%2Fimage.solanatracker.io%2Fproxy%3Furl%3Dhttps%253A%252F%252Fipfs.io%252Fipfs%252FQmbBVm7CffYX2wnuCrGLARgQHAoX79E4m1HWN2AcBqGYqa\",\n\"showName\": true,\n\"twitter\": \"https://twitter.com/aprilfoolsday\",\n\"telegram\": \"https://t.me/aprilsfoolsday\",\n\"strictSocials\": {\n\"twitter\": \"https://twitter.com/aprilfoolsday\",\n\"telegram\": \"https://t.me/aprilsfoolsday\"\n},\n\"creation\": {\n\"creator\": \"9zGpUxJr2jnkwSSF9VGezy6aALEfxysE19hvcRSkbn15\",\n\"created_tx\": \"5eHbuGuF1GfFcBgHcym69A1ErUYzY5vD2tE5hJ4A71yvZ7U3e93xMy1CWeH1HcAiyy6Yi8GDoJjeSXHhuDC4CFnW\",\n\"created_time\": 1749298225\n}\n},\n\"pools\": [],\n\"events\": {},\n\"risk\": {},\n\"buys\": 3,\n\"sells\": 0,\n\"txns\": 3\n},\n{\n\"token\": {\n\"name\": \"KWGPOK\",\n\"symbol\": \"OKGWP\",\n\"mint\": \"7HKHmpYMVtwMqwLrH5529q26v8grmUmWscmww97pump\",\n\"uri\": \"https://ipfs.io/ipfs/QmTBkpB8t7R5R9aR2tcJxAM4PM3R6XB9VZ2jE2i1wQR5ar\",\n\"decimals\": 6,\n\"hasFileMetaData\": true,\n\"createdOn\": \"https://pump.fun\",\n\"description\": \"POGWSE\",\n\"image\": \"https://image.solanatracker.io/proxy?url=https%3A%2F%2Fimage.solanatracker.io%2Fproxy%3Furl%3Dhttps%253A%252F%252Fipfs.io%252Fipfs%252FQmRDA43fShZSVCE73wSbKemivVPYqWhW222n5roH8c987w\",\n\"showName\": true,\n\"strictSocials\": {},\n\"creation\": {\n\"creator\": \"9zGpUxJr2jnkwSSF9VGezy6aALEfxysE19hvcRSkbn15\",\n\"created_tx\": \"5eHbuGuF1GfFcBgHcym69A1ErUYzY5vD2tE5hJ4A71yvZ7U3e93xMy1CWeH1HcAiyy6Yi8GDoJjeSXHhuDC4CFnW\",\n\"created_time\": 1749298225\n}\n},\n\"pools\": [\n{\n\"poolId\": \"7HKHmpYMVtwMqwLrH5529q26v8grmUmWscmww97pump\",\n\"liquidity\": {\n\"quote\": 60.200984914,\n\"usd\": 7504.35662608982\n},\n\"price\": {\n\"quote\": 2.814661839287826e-8,\n\"usd\": 0.000003508618049029575\n},\n\"tokenSupply\": 1000000000,\n\"lpBurn\": 100,\n\"tokenAddress\": \"7HKHmpYMVtwMqwLrH5529q26v8grmUmWscmww97pump\",\n\"marketCap\": {\n\"quote\": 28.14661839287826,\n\"usd\": 3508.618049029575\n},\n\"decimals\": 6,\n\"security\": {\n\"freezeAuthority\": null,\n\"mintAuthority\": null\n},\n\"quoteToken\": \"So11111111111111111111111111111111111111112\",\n\"market\": \"pumpfun\",\n\"curvePercentage\": 0.45168079312482234,\n\"curve\": \"Hf4ak2796LJu4nYFUyVAmXV7bxiSvLw3Ayq5C4PFDJWk\",\n\"deployer\": \"6hepaQw3pugEBnwY2JBuYGoE5kZjho4DCSHAUKZhcoe\",\n\"lastUpdated\": 1743276573362,\n\"createdAt\": 1743276571192,\n\"txns\": {\n\"buys\": 2,\n\"total\": 4,\n\"volume\": 251,\n\"sells\": 1\n}\n}\n\"events\": {\n\"1m\": {\n\"priceChangePercentage\": 0\n},\n\"5m\": {\n\"priceChangePercentage\": 0\n},\n\"15m\": {\n\"priceChangePercentage\": 0\n},\n\"30m\": {\n\"priceChangePercentage\": 0\n},\n\"1h\": {\n\"priceChangePercentage\": 0\n},\n\"2h\": {\n\"priceChangePercentage\": 0\n},\n\"3h\": {\n\"priceChangePercentage\": 0\n},\n\"4h\": {\n\"priceChangePercentage\": 0\n},\n\"5h\": {\n\"priceChangePercentage\": 0\n},\n\"6h\": {\n\"priceChangePercentage\": 0\n},\n\"12h\": {\n\"priceChangePercentage\": 0\n},\n\"24h\": {\n\"priceChangePercentage\": 0\n}\n},\n\"risk\": {\n\"rugged\": false,\n\"risks\": [\n{\n\"name\": \"No social media\",\n\"description\": \"This token has no social media links\",\n\"level\": \"warning\",\n\"score\": 2000\n},\n{\n\"name\": \"Pump.fun contracts can be changed at any time\",\n\"description\": \"Pump.fun contracts can be changed by Pump.fun at any time\",\n\"level\": \"warning\",\n\"score\": 10\n},\n{\n\"name\": \"Bonding curve not complete\",\n\"description\": \"No raydium liquidity pool, bonding curve not complete\",\n\"level\": \"warning\",\n\"score\": 4000\n}\n\"score\": 5\n},\n\"buys\": 3,\n\"sells\": 1,\n\"txns\": 4\n}\n]",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "POST /tokens/multi": {
+      "endpoint": "POST /tokens/multi",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#post-tokensmulti",
+      "method": "POST",
+      "path": "/tokens/multi",
+      "description": "",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [
+        "Batch endpoint for multiple items"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/trending": {
+      "endpoint": "GET /tokens/trending",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokenstrending",
+      "method": "GET",
+      "path": "/tokens/trending",
+      "description": "Gets the top 100 trending tokens based on transaction volume in the specified timeframe (default: past hour).",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/trending/{timeframe}": {
+      "endpoint": "GET /tokens/trending/{timeframe}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokenstrendingtimeframe",
+      "method": "GET",
+      "path": "/tokens/trending/{timeframe}",
+      "description": "Gets the top 100 trending tokens based on transaction volume in the specified timeframe (default: past hour).",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "timeframe",
+          "type": "string",
+          "description": "The timeframe identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/volume": {
+      "endpoint": "GET /tokens/volume",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokensvolume",
+      "method": "GET",
+      "path": "/tokens/volume",
+      "description": "Retrieves the top 100 tokens sorted by highest volume within the specified timeframe.",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/volume/{timeframe}": {
+      "endpoint": "GET /tokens/volume/{timeframe}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokensvolumetimeframe",
+      "method": "GET",
+      "path": "/tokens/volume/{timeframe}",
+      "description": "Retrieves the top 100 tokens sorted by highest volume within the specified timeframe.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "timeframe",
+          "type": "string",
+          "description": "The timeframe identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/multi/all": {
+      "endpoint": "GET /tokens/multi/all",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokensmultiall",
+      "method": "GET",
+      "path": "/tokens/multi/all",
+      "description": "Gets an overview of latest, graduating, and graduated tokens (Pumpvision / Photon Memescope style).",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"latest\": [\n{\n\"token\": {\n\"name\": \"Cult of Trenching\",\n\"symbol\": \"TrenchCult\",\n\"mint\": \"uwjFzyPjn8ayhfVfeMUzkQBbrgeFMeEd47NvRbCpump\",\n\"uri\": \"https://ipfs.io/ipfs/QmWT5HsQh5oLvnqthDgQEGVUjn3gH9R6PyhJNr4wkdsn66\",\n\"decimals\": 6,\n\"hasFileMetaData\": true,\n\"createdOn\": \"https://pump.fun\",\n\"description\": \"\",\n\"image\": \"https://image.solanatracker.io/proxy?url=https%3A%2F%2Fimage.solanatracker.io%2Fproxy%3Furl%3Dhttps%253A%252F%252Fipfs.io%252Fipfs%252FQmXWHqMvrqkubp6kxw9vUcNPv42ZXQ3BLcCARXjUoWLsAg\",\n\"showName\": true,\n\"twitter\": \"https://x.com/solgoated1/status/1906065859657032002\",\n\"website\": \"https://x.com/solgoated1/status/1906065859657032002\",\n\"strictSocials\": {\n\"twitter\": \"https://x.com/solgoated1/status/1906065859657032002\"\n}\n},\n\"pools\": [\n{\n\"poolId\": \"uwjFzyPjn8ayhfVfeMUzkQBbrgeFMeEd47NvRbCpump\",\n\"liquidity\": {\n\"quote\": 74.997144066,\n\"usd\": 9366.628111886268\n},\n\"price\": {\n\"quote\": 4.3682600325215646e-8,\n\"usd\": 0.0000054556567093592755\n},\n\"tokenSupply\": 1000000000,\n\"lpBurn\": 100,\n\"tokenAddress\": \"uwjFzyPjn8ayhfVfeMUzkQBbrgeFMeEd47NvRbCpump\",\n\"marketCap\": {\n\"quote\": 43.682600325215645,\n\"usd\": 5455.656709359276\n},\n\"decimals\": 6,\n\"security\": {\n\"freezeAuthority\": null,\n\"mintAuthority\": null\n},\n\"quoteToken\": \"So11111111111111111111111111111111111111112\",\n\"market\": \"pumpfun\",\n\"curvePercentage\": 27.05425691727814,\n\"curve\": \"7ofQyZf2HmYCmM4LWHNaP9VEZ2frevtwmEdtjBb2hwgh\",\n\"deployer\": \"6Y5FiURYwKGXBPAes1P9WDGuHoi8oiz4FwYWyHeYNXPw\",\n\"lastUpdated\": 1743276647681,\n\"createdAt\": 1743276646913,\n\"txns\": {\n\"buys\": 3,\n\"total\": 3,\n\"volume\": 490,\n\"sells\": 0\n}\n}\n\"events\": {\n\"1m\": {\n\"priceChangePercentage\": 0\n},\n\"5m\": {\n\"priceChangePercentage\": 0\n},\n\"15m\": {\n\"priceChangePercentage\": 0\n},\n\"30m\": {\n\"priceChangePercentage\": 0\n},\n\"1h\": {\n\"priceChangePercentage\": 0\n},\n\"2h\": {\n\"priceChangePercentage\": 0\n},\n\"3h\": {\n\"priceChangePercentage\": 0\n},\n\"4h\": {\n\"priceChangePercentage\": 0\n},\n\"5h\": {\n\"priceChangePercentage\": 0\n},\n\"6h\": {\n\"priceChangePercentage\": 0\n},\n\"12h\": {\n\"priceChangePercentage\": 0\n},\n\"24h\": {\n\"priceChangePercentage\": 0\n}\n},\n\"risk\": {\n\"rugged\": false,\n\"risks\": [\n{\n\"name\": \"Pump.fun contracts can be changed at any time\",\n\"description\": \"Pump.fun contracts can be changed by Pump.fun at any time\",\n\"level\": \"warning\",\n\"score\": 10\n},\n{\n\"name\": \"Bonding curve not complete\",\n\"description\": \"No raydium liquidity pool, bonding curve not complete\",\n\"level\": \"warning\",\n\"score\": 4000\n}\n\"score\": 3\n},\n\"buys\": 2,\n\"sells\": 0,\n\"txns\": 2\n}\n\"graduating\": [\n{\n\"token\": {\n\"name\": \"White Grandpa\",\n\"symbol\": \"UNC\",\n\"mint\": \"6wX5EfAx9gGHLQ2Z21N8CaLorGav8EFDdrTzyq1pump\",\n\"uri\": \"https://ipfs.io/ipfs/QmPX3mqev2udUJLVNFHTxY8gTSodDbfbQrYoQvAWq9FVsT\",\n\"decimals\": 6,\n\"hasFileMetaData\": true,\n\"createdOn\": \"https://pump.fun\",\n\"description\": \"stay woke\\r\\nhttps://x.com/DailyLoud/status/1905634722543251595\",\n\"image\": \"https://image.solanatracker.io/proxy?url=https%3A%2F%2Fipfs-forward.solanatracker.io%2Fipfs%2FQmRY15KCq65MMgECXWbnAivuDcHV7t7gKXHRpb2qCQbeGM\",\n\"showName\": true,\n\"twitter\": \"https://x.com/DailyLoud/status/1905634722543251595\",\n\"strictSocials\": {\n\"twitter\": \"https://x.com/DailyLoud/status/1905634722543251595\"\n},\n\"creation\": {\n\"creator\": \"9zGpUxJr2jnkwSSF9VGezy6aALEfxysE19hvcRSkbn15\",\n\"created_tx\": \"5eHbuGuF1GfFcBgHcym69A1ErUYzY5vD2tE5hJ4A71yvZ7U3e93xMy1CWeH1HcAiyy6Yi8GDoJjeSXHhuDC4CFnW\",\n\"created_time\": 1749298225\n}\n},\n\"pools\": [\n{\n\"poolId\": \"6wX5EfAx9gGHLQ2Z21N8CaLorGav8EFDdrTzyq1pump\",\n\"liquidity\": {\n\"quote\": 184.205822434,\n\"usd\": 23006.041846940676\n},\n\"price\": {\n\"quote\": 2.635273705842488e-7,\n\"usd\": 0.00003291275832308565\n},\n\"tokenSupply\": 1000000000,\n\"lpBurn\": 100,\n\"tokenAddress\": \"6wX5EfAx9gGHLQ2Z21N8CaLorGav8EFDdrTzyq1pump\",\n\"marketCap\": {\n\"quote\": 263.5273705842488,\n\"usd\": 32912.75832308565\n},\n\"decimals\": 6,\n\"security\": {\n\"freezeAuthority\": null,\n\"mintAuthority\": null\n},\n\"quoteToken\": \"So11111111111111111111111111111111111111112\",\n\"market\": \"pumpfun\",\n\"curvePercentage\": 91.22426412249791,\n\"curve\": \"B8UVQ46EqQ2sEHagX7h1WzDpxuFVXp6fAjiXFaT1D692\",\n\"deployer\": \"4VfBaC9Jftw4Bm1oHYt8TrhamF7DGEr9Ut2JovCPWbqe\",\n\"lastUpdated\": 1743276647759,\n\"createdAt\": 1743274179758,\n\"txns\": {\n\"buys\": 977,\n\"total\": 1866,\n\"volume\": 31100,\n\"sells\": 889\n},\n\"bundleId\": \"e88d7ab51773355bad96ac842f0976231bd87083d77882f56c62a277c840fcb8\"\n}\n\"events\": {\n\"1m\": {\n\"priceChangePercentage\": -4.1724840124786216\n},\n\"5m\": {\n\"priceChangePercentage\": -0.8171310506410367\n},\n\"15m\": {\n\"priceChangePercentage\": 46.42260473798215\n},\n\"30m\": {\n\"priceChangePercentage\": 54.14793685627088\n},\n\"1h\": {\n\"priceChangePercentage\": 868.7250909621494\n},\n\"2h\": {\n\"priceChangePercentage\": 868.7250909621494\n},\n\"3h\": {\n\"priceChangePercentage\": 868.7250909621494\n},\n\"4h\": {\n\"priceChangePercentage\": 868.7250909621494\n},\n\"5h\": {\n\"priceChangePercentage\": 868.7250909621494\n},\n\"6h\": {\n\"priceChangePercentage\": 868.7250909621494\n},\n\"12h\": {\n\"priceChangePercentage\": 868.7250909621494\n},\n\"24h\": {\n\"priceChangePercentage\": 868.7250909621494\n}\n},\n\"risk\": {\n\"rugged\": false,\n\"risks\": [\n{\n\"name\": \"Pump.fun contracts can be changed at any time\",\n\"description\": \"Pump.fun contracts can be changed by Pump.fun at any time\",\n\"level\": \"warning\",\n\"score\": 10\n},\n{\n\"name\": \"Bonding curve not complete\",\n\"description\": \"No raydium liquidity pool, bonding curve not complete\",\n\"level\": \"warning\",\n\"score\": 4000\n}\n\"score\": 3\n},\n\"buys\": 1182,\n\"sells\": 1123,\n\"txns\": 2305,\n\"holders\": 232\n}\n\"graduated\": [\n{\n\"token\": {\n\"name\": \"X Æ Meow-12\",\n\"symbol\": \"XÆMeow-12\",\n\"mint\": \"UkAivL55R7iBEW3wfsTETdiHM1jfByHTRAFQHiKWLyF\",\n\"uri\": \"https://ipfs-forward.solanatracker.io/ipfs/QmZc1ndhGNpywi5YdbiUwWetAumWPCqdyHCDoAN6hVQ7Pb\",\n\"decimals\": 6,\n\"description\": \"\",\n\"image\": \"https://image.solanatracker.io/proxy?url=https%3A%2F%2Fipfs-forward.solanatracker.io%2Fipfs%2FQme3Qoomq5sUxx8E7BViGQ5CCs9obGHWfA8C6UrmBscPSS\",\n\"showName\": true,\n\"createdOn\": \"https://pump.fun\",\n\"twitter\": \"https://x.com/Josikinz/status/1906060748796867071\",\n\"hasFileMetaData\": true,\n\"strictSocials\": {\n\"twitter\": \"https://x.com/Josikinz/status/1906060748796867071\"\n},\n\"creation\": {\n\"creator\": \"9zGpUxJr2jnkwSSF9VGezy6aALEfxysE19hvcRSkbn15\",\n\"created_tx\": \"5eHbuGuF1GfFcBgHcym69A1ErUYzY5vD2tE5hJ4A71yvZ7U3e93xMy1CWeH1HcAiyy6Yi8GDoJjeSXHhuDC4CFnW\",\n\"created_time\": 1749298225\n}\n},\n\"pools\": [\n{\n\"poolId\": \"5UH61hrcBSgE3fLXQ4bMTtXb7e1bVvSeisJq7z8V8yvE\",\n\"liquidity\": {\n\"quote\": 18.503268912,\n\"usd\": 4613.051725397854\n},\n\"price\": {\n\"quote\": 1.9289130860019372e-8,\n\"usd\": 0.0000024044875210544464\n},\n\"tokenSupply\": 1000000000,\n\"lpBurn\": 100,\n\"tokenAddress\": \"UkAivL55R7iBEW3wfsTETdiHM1jfByHTRAFQHiKWLyF\",\n\"marketCap\": {\n\"quote\": 19.289130860019373,\n\"usd\": 2404.4875210544465\n},\n\"decimals\": 6,\n\"security\": {\n\"freezeAuthority\": null,\n\"mintAuthority\": null\n},\n\"quoteToken\": \"So11111111111111111111111111111111111111112\",\n\"market\": \"pumpfun-amm\",\n\"deployer\": \"2WDizMKyQaYXJxaZ2oPFGM9kdCZuWhX52oMy57NUESrN\",\n\"lastUpdated\": 1743276422531,\n\"txns\": {\n\"buys\": 25,\n\"total\": 45,\n\"volume\": 5947,\n\"sells\": 20\n},\n\"bundleId\": \"5ad775152feacf1be43bdbc82a9c0551a2757cca30bb8bfb15c0d1742692a78e\"\n},\n{\n\"poolId\": \"UkAivL55R7iBEW3wfsTETdiHM1jfByHTRAFQHiKWLyF\",\n\"liquidity\": {\n\"quote\": 0,\n\"usd\": 0\n},\n\"price\": {\n\"quote\": null,\n\"usd\": null\n},\n\"tokenSupply\": 1000000000,\n\"lpBurn\": 100,\n\"tokenAddress\": \"UkAivL55R7iBEW3wfsTETdiHM1jfByHTRAFQHiKWLyF\",\n\"marketCap\": {\n\"quote\": null,\n\"usd\": null\n},\n\"decimals\": 6,\n\"security\": {\n\"freezeAuthority\": null,\n\"mintAuthority\": null\n},\n\"quoteToken\": \"So11111111111111111111111111111111111111112\",\n\"market\": \"pumpfun\",\n\"curvePercentage\": 100,\n\"curve\": \"WLEgumwUg9brqWHZUYPFVpSqAur5Av8ctYkqegtUDJN\",\n\"deployer\": \"6d22FozaKK239PoBYVffkYKA1QPQZE8fC7AQkpmHQfjp\",\n\"lastUpdated\": 1743275416731,\n\"createdAt\": 1743275416459,\n\"txns\": {\n\"buys\": 1,\n\"total\": 1,\n\"volume\": 5305,\n\"sells\": 0\n}\n}\n\"events\": {\n\"1m\": {\n\"priceChangePercentage\": 0\n},\n\"5m\": {\n\"priceChangePercentage\": 2.546993067700225\n},\n\"15m\": {\n\"priceChangePercentage\": -7.955395053691079\n},\n\"30m\": {\n\"priceChangePercentage\": -95.75161080372789\n},\n\"1h\": {\n\"priceChangePercentage\": -95.75161080372789\n},\n\"2h\": {\n\"priceChangePercentage\": -95.75161080372789\n},\n\"3h\": {\n\"priceChangePercentage\": -95.75161080372789\n},\n\"4h\": {\n\"priceChangePercentage\": -95.75161080372789\n},\n\"5h\": {\n\"priceChangePercentage\": -95.75161080372789\n},\n\"6h\": {\n\"priceChangePercentage\": -95.75161080372789\n},\n\"12h\": {\n\"priceChangePercentage\": -95.75161080372789\n},\n\"24h\": {\n\"priceChangePercentage\": -95.75161080372789\n}\n},\n\"risk\": {\n\"rugged\": false,\n\"risks\": [\n{\n\"name\": \"Price Decrease\",\n\"description\": \"Price decreased by more than 50% in the last 24 hours\",\n\"level\": \"warning\",\n\"score\": 1000\n}\n\"score\": 1\n},\n\"buys\": 1,\n\"sells\": 0,\n\"txns\": 1,\n\"holders\": 13\n}\n]\n}",
+      "available_intervals": [],
+      "notes": [
+        "Batch endpoint for multiple items"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /tokens/multi/graduated": {
+      "endpoint": "GET /tokens/multi/graduated",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tokensmultigraduated",
+      "method": "GET",
+      "path": "/tokens/multi/graduated",
+      "description": "",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [
+        "Batch endpoint for multiple items"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /price": {
+      "endpoint": "GET /price",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-price",
+      "method": "GET",
+      "path": "/price",
+      "description": "Gets price information for a single token.",
+      "query_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token address",
+          "required": true
+        },
+        {
+          "name": "priceChanges",
+          "type": "boolean",
+          "description": "Returns price change percentages up to 24 hours ago",
+          "required": false
+        }
+      ],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"price\": 1.23,\n\"liquidity\": 1000000,\n\"marketCap\": 50000000,\n\"lastUpdated\": 1628097600000\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /price/history": {
+      "endpoint": "GET /price/history",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-pricehistory",
+      "method": "GET",
+      "path": "/price/history",
+      "description": "Gets historic price information for a single token.",
+      "query_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token address",
+          "required": true
+        },
+        {
+          "name": "time_from",
+          "type": "integer",
+          "description": "Start time (unix timestamp)",
+          "required": true
+        },
+        {
+          "name": "time_to",
+          "type": "integer",
+          "description": "End time (unix timestamp)",
+          "required": true
+        }
+      ],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"current\": 0.00153420295896641,\n\"3d\": 0.0003172284163334442,\n\"5d\": 0.00030182128340039925,\n\"7d\": 0.0003772164702056164,\n\"14d\": 0.0003333105740474755,\n\"30d\": 0.0008621030248959815\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /price/history/timestamp": {
+      "endpoint": "GET /price/history/timestamp",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-pricehistorytimestamp",
+      "method": "GET",
+      "path": "/price/history/timestamp",
+      "description": "Gets specific historic price information for a token at a given timestamp.",
+      "query_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token address",
+          "required": true
+        },
+        {
+          "name": "timestamp",
+          "type": "integer",
+          "description": "Unix timestamp",
+          "required": true
+        }
+      ],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"price\": 0.0010027648651222173,\n\"timestamp\": 1732237829688,\n\"timestamp_unix\": 1732237830,\n\"pool\": \"D5Nbd1N7zAu8zjKoz3yR9WSXTiZr1c1TwRtiHeu5j7iv\"\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /price/history/range": {
+      "endpoint": "GET /price/history/range",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-pricehistoryrange",
+      "method": "GET",
+      "path": "/price/history/range",
+      "description": "Gets the lowest and highest price in a time range",
+      "query_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token address",
+          "required": true
+        },
+        {
+          "name": "time_from",
+          "type": "integer",
+          "description": "Start time (unix timestamp)",
+          "required": true
+        },
+        {
+          "name": "time_to",
+          "type": "integer",
+          "description": "End time (unix timestamp)",
+          "required": true
+        }
+      ],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"token\": \"HEZ6KcNNUKaWvUCBEe4BtfoeDHEHPkCHY9JaDNqrpump\",\n\"price\": {\n\"lowest\": {\n\"price\": 0.000048405946337731886,\n\"time\": 1740009112\n},\n\"highest\": {\n\"price\": 0.003417425506087095,\n\"time\": 1740216420\n}\n}\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "POST /price": {
+      "endpoint": "POST /price",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#post-price",
+      "method": "POST",
+      "path": "/price",
+      "description": "",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /price/multi": {
+      "endpoint": "GET /price/multi",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-pricemulti",
+      "method": "GET",
+      "path": "/price/multi",
+      "description": "Gets price information for multiple tokens (up to 100).",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [
+        "Batch endpoint for multiple items"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "POST /price/multi": {
+      "endpoint": "POST /price/multi",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#post-pricemulti",
+      "method": "POST",
+      "path": "/price/multi",
+      "description": "",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [
+        "Batch endpoint for multiple items"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /wallet/{owner}": {
+      "endpoint": "GET /wallet/{owner}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-walletowner",
+      "method": "GET",
+      "path": "/wallet/{owner}",
+      "description": "Gets all tokens in a wallet with current value in USD.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "owner",
+          "type": "string",
+          "description": "The owner identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"tokens\": [\n{\n\"token\": {\n\"name\": \"Wrapped SOL\",\n\"symbol\": \"SOL\",\n\"mint\": \"So11111111111111111111111111111111111111112\",\n\"uri\": \"\",\n\"decimals\": 9,\n\"image\": \"https://image.solanatracker.io/proxy?url=https%3A%2F%2Fcoin-images.coingecko.com%2Fcoins%2Fimages%2F21629%2Flarge%2Fsolana.jpg%3F1696520989\",\n\"hasFileMetaData\": true,\n\"creation\": {\n\"creator\": \"9zGpUxJr2jnkwSSF9VGezy6aALEfxysE19hvcRSkbn15\",\n\"created_tx\": \"5eHbuGuF1GfFcBgHcym69A1ErUYzY5vD2tE5hJ4A71yvZ7U3e93xMy1CWeH1HcAiyy6Yi8GDoJjeSXHhuDC4CFnW\",\n\"created_time\": 1749298225\n}\n},\n\"pools\": [...],\n\"events\": {...},\n\"risk\": {...},\n\"balance\": 0.775167121,\n\"value\": 112.31297732160377\n}\n\"total\": 228.41656975961473,\n\"totalSol\": 1.5750283296373857,\n\"timestamp\": \"2024-08-15 12:49:06\"\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /wallet/{owner}/basic": {
+      "endpoint": "GET /wallet/{owner}/basic",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-walletownerbasic",
+      "method": "GET",
+      "path": "/wallet/{owner}/basic",
+      "description": "Gets all tokens in a wallet with current value in USD (lightweight, non-cached option).",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "owner",
+          "type": "string",
+          "description": "The owner identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"tokens\": [\n{\n\"address\": \"So11111111111111111111111111111111111111112\",\n\"balance\": 0.019911506,\n\"value\": 2.4810073805356456,\n\"price\": {\n\"quote\": 1,\n\"usd\": 124.60169414285619\n},\n\"marketCap\": {\n\"quote\": 79833267.86038868,\n\"usd\": 9953124295.82677\n},\n\"liquidity\": {\n\"quote\": 395459.208121804,\n\"usd\": 49303439.00300889\n}\n},\n{\n\"address\": \"9BT13kNGQFKvSj2BibHPKmpxxSnqMFUEEZEMQ5SNpump\",\n\"balance\": 35145.6526,\n\"value\": 0.07660938412685546,\n\"price\": {\n\"usd\": 0.0000021797684339159336,\n\"quote\": 1.6913819975765577e-8\n},\n\"marketCap\": {\n\"usd\": 2178.6061946025698,\n\"quote\": 16.904801629500383\n},\n\"liquidity\": {\n\"usd\": 4300.296098435483,\n\"quote\": 33.367963734\n}\n},\n{\n\"address\": \"EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm\",\n\"balance\": 0.078177,\n\"value\": 0.03318780628945246,\n\"price\": {\n\"usd\": 0.42452135908838234,\n\"quote\": 0.0034070271837690056\n},\n\"marketCap\": {\n\"usd\": 424029286.2902132,\n\"quote\": 3403078.017575447\n},\n\"liquidity\": {\n\"usd\": 7978691.886756113,\n\"quote\": 64033.57467683\n}\n},\n{\n\"address\": \"AF7CYuqRw61atGBVT9LpxaXuSW9RuGmfnSAEgaHppump\",\n\"balance\": 2143.21592,\n\"value\": 0.0075007010716513205,\n\"price\": {\n\"usd\": 0.0000034997412074334164,\n\"quote\": 2.7995661589662763e-8\n},\n\"marketCap\": {\n\"usd\": 3499.7412074334165,\n\"quote\": 27.995661589662763\n},\n\"liquidity\": {\n\"usd\": 7505.524527654956,\n\"quote\": 60.039332132\n}\n}\n\"total\": 2.598305272023605,\n\"totalSol\": 0.02085288879816225\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /wallet/{owner}/page/{page}": {
+      "endpoint": "GET /wallet/{owner}/page/{page}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-walletownerpagepage",
+      "method": "GET",
+      "path": "/wallet/{owner}/page/{page}",
+      "description": "Retrieves wallet tokens using pagination with a limit of 250 tokens per request.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "owner",
+          "type": "string",
+          "description": "The owner identifier",
+          "required": true
+        },
+        {
+          "name": "page",
+          "type": "string",
+          "description": "The page identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /wallet/{owner}/trades": {
+      "endpoint": "GET /wallet/{owner}/trades",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-walletownertrades",
+      "method": "GET",
+      "path": "/wallet/{owner}/trades",
+      "description": "Gets the latest trades of a wallet.",
+      "query_parameters": [
+        {
+          "name": "page",
+          "type": "integer",
+          "description": "Page number for pagination",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "integer",
+          "description": "Number of trades per page",
+          "required": false
+        }
+      ],
+      "path_parameters": [
+        {
+          "name": "owner",
+          "type": "string",
+          "description": "The owner identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"trades\": [\n{\n\"tx\": \"Transaction Signature here\",\n\"from\": {\n\"address\": \"So11111111111111111111111111111111111111112\",\n\"amount\": 0.00009999999747378752,\n\"token\": {\n\"name\": \"Wrapped SOL\",\n\"symbol\": \"SOL\",\n\"image\": \"https://image.solanatracker.io/proxy?url=https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png\",\n\"decimals\": 9\n}\n},\n\"to\": {\n\"address\": \"4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R\",\n\"amount\": 0.00815899996086955,\n\"token\": {\n\"name\": \"Raydium\",\n\"symbol\": \"RAY\",\n\"image\": \"https://image.solanatracker.io/proxy?url=https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R/logo.png\",\n\"decimals\": 6\n}\n},\n\"price\": {\n\"usd\": 1.7136074522202307,\n\"sol\": \"\"\n},\n\"volume\": {\n\"usd\": 0.014018403988365319,\n\"sol\": 0.00009999999747378752\n},\n\"wallet\": \"WALLET_ADDRESS\",\n\"program\": \"raydium\",\n\"time\": 1722759119596\n}\n\"nextCursor\": 1722759119596,\n\"hasNextPage\": true\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /wallet/{owner}/chart": {
+      "endpoint": "GET /wallet/{owner}/chart",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-walletownerchart",
+      "method": "GET",
+      "path": "/wallet/{owner}/chart",
+      "description": "Gets wallet portfolio chart data with historical values and PnL information.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "owner",
+          "type": "string",
+          "description": "The owner identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"chartData\": [\n{\n\"date\": \"2024-12-08\",\n\"value\": 890670.2,\n\"timestamp\": 1733692405000,\n\"pnlPercentage\": 0\n},\n{\n\"date\": \"2024-05-14\",\n\"value\": 1450.27,\n\"timestamp\": 1715668377000,\n\"pnlPercentage\": -99.84\n},\n{\n\"date\": \"2025-01-22\",\n\"value\": 3938345.2,\n\"timestamp\": 1737554275000,\n\"pnlPercentage\": 575.17\n}\n\"pnl\": {\n\"24h\": {\n\"value\": 105528.2,\n\"percentage\": 2.8\n},\n\"30d\": {\n\"value\": 3346283.26,\n\"percentage\": 634.99\n}\n}\n}```",
+      "available_intervals": [],
+      "notes": [
+        "OHLCV data endpoint with customizable time intervals"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /trades/{tokenAddress}/{poolAddress}": {
+      "endpoint": "GET /trades/{tokenAddress}/{poolAddress}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tradestokenaddresspooladdress",
+      "method": "GET",
+      "path": "/trades/{tokenAddress}/{poolAddress}",
+      "description": "Gets the latest trades for a specific token and pool pair.",
+      "query_parameters": [
+        {
+          "name": "page",
+          "type": "integer",
+          "description": "Page number for pagination",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "integer",
+          "description": "Number of trades per page",
+          "required": false
+        }
+      ],
+      "path_parameters": [
+        {
+          "name": "tokenAddress",
+          "type": "string",
+          "description": "The tokenAddress identifier",
+          "required": true
+        },
+        {
+          "name": "poolAddress",
+          "type": "string",
+          "description": "The poolAddress identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /trades/{tokenAddress}/{poolAddress}/{owner}": {
+      "endpoint": "GET /trades/{tokenAddress}/{poolAddress}/{owner}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tradestokenaddresspooladdressowner",
+      "method": "GET",
+      "path": "/trades/{tokenAddress}/{poolAddress}/{owner}",
+      "description": "Gets the latest trades for a specific token, pool, and wallet address.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "tokenAddress",
+          "type": "string",
+          "description": "The tokenAddress identifier",
+          "required": true
+        },
+        {
+          "name": "poolAddress",
+          "type": "string",
+          "description": "The poolAddress identifier",
+          "required": true
+        },
+        {
+          "name": "owner",
+          "type": "string",
+          "description": "The owner identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /trades/{tokenAddress}/by-wallet/{owner}": {
+      "endpoint": "GET /trades/{tokenAddress}/by-wallet/{owner}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-tradestokenaddressbywalletowner",
+      "method": "GET",
+      "path": "/trades/{tokenAddress}/by-wallet/{owner}",
+      "description": "",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "tokenAddress",
+          "type": "string",
+          "description": "The tokenAddress identifier",
+          "required": true
+        },
+        {
+          "name": "owner",
+          "type": "string",
+          "description": "The owner identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /chart/{token}": {
+      "endpoint": "GET /chart/{token}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-charttoken",
+      "method": "GET",
+      "path": "/chart/{token}",
+      "description": "Gets OHLCV (Open, High, Low, Close, Volume) data for charts.",
+      "query_parameters": [
+        {
+          "name": "type",
+          "type": "string",
+          "description": "Time interval (e.g., '1s', '1m', '1h', '1d')",
+          "required": false
+        },
+        {
+          "name": "time_from",
+          "type": "integer",
+          "description": "Start time (Unix timestamp in seconds)",
+          "required": false
+        },
+        {
+          "name": "time_to",
+          "type": "integer",
+          "description": "End time (Unix timestamp in seconds)",
+          "required": false
+        },
+        {
+          "name": "marketCap",
+          "type": "boolean",
+          "description": "Return chart for market cap instead of pricing",
+          "required": false
+        },
+        {
+          "name": "removeOutliers",
+          "type": "boolean",
+          "description": "Set to false to disable outlier removal, true by default",
+          "required": false
+        }
+      ],
+      "path_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"oclhv\": [\n{\n\"open\": 0.011223689525154462,\n\"close\": 0.011223689525154462,\n\"low\": 0.011223689525154462,\n\"high\": 0.011223689525154462,\n\"volume\": 683.184501136,\n\"time\": 1722514489\n},\n{\n\"open\": 0.011223689525154462,\n\"close\": 0.011257053686384555,\n\"low\": 0.011257053686384555,\n\"high\": 0.011257053686384555,\n\"volume\": 12788.70421942799,\n\"time\": 1722514771\n}\n]\n}",
+      "available_intervals": [
+        "1s",
+        "1h",
+        "5s",
+        "2h",
+        "15s",
+        "4h",
+        "1m",
+        "6h",
+        "3m",
+        "8h",
+        "5m",
+        "12h",
+        "15m",
+        "1d",
+        "30m",
+        "3d",
+        "1w",
+        "1mn"
+      ],
+      "notes": [
+        "OHLCV data endpoint with customizable time intervals"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /chart/{token}/{pool}": {
+      "endpoint": "GET /chart/{token}/{pool}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-charttokenpool",
+      "method": "GET",
+      "path": "/chart/{token}/{pool}",
+      "description": "Gets OHLCV (Open, High, Low, Close, Volume) data for charts.",
+      "query_parameters": [
+        {
+          "name": "type",
+          "type": "string",
+          "description": "Time interval (e.g., '1s', '1m', '1h', '1d')",
+          "required": false
+        },
+        {
+          "name": "time_from",
+          "type": "integer",
+          "description": "Start time (Unix timestamp in seconds)",
+          "required": false
+        },
+        {
+          "name": "time_to",
+          "type": "integer",
+          "description": "End time (Unix timestamp in seconds)",
+          "required": false
+        },
+        {
+          "name": "marketCap",
+          "type": "boolean",
+          "description": "Return chart for market cap instead of pricing",
+          "required": false
+        },
+        {
+          "name": "removeOutliers",
+          "type": "boolean",
+          "description": "Set to false to disable outlier removal, true by default",
+          "required": false
+        }
+      ],
+      "path_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token identifier",
+          "required": true
+        },
+        {
+          "name": "pool",
+          "type": "string",
+          "description": "The pool identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"oclhv\": [\n{\n\"open\": 0.011223689525154462,\n\"close\": 0.011223689525154462,\n\"low\": 0.011223689525154462,\n\"high\": 0.011223689525154462,\n\"volume\": 683.184501136,\n\"time\": 1722514489\n},\n{\n\"open\": 0.011223689525154462,\n\"close\": 0.011257053686384555,\n\"low\": 0.011257053686384555,\n\"high\": 0.011257053686384555,\n\"volume\": 12788.70421942799,\n\"time\": 1722514771\n}\n]\n}",
+      "available_intervals": [
+        "1s",
+        "1h",
+        "5s",
+        "2h",
+        "15s",
+        "4h",
+        "1m",
+        "6h",
+        "3m",
+        "8h",
+        "5m",
+        "12h",
+        "15m",
+        "1d",
+        "30m",
+        "3d",
+        "1w",
+        "1mn"
+      ],
+      "notes": [
+        "OHLCV data endpoint with customizable time intervals"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /holders/chart/{token}": {
+      "endpoint": "GET /holders/chart/{token}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-holderscharttoken",
+      "method": "GET",
+      "path": "/holders/chart/{token}",
+      "description": "Gets token holder count data over time. Returns up to 1000 of the most recent data points.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"holders\": [\n{\n\"holders\": 1235,\n\"time\": 1722414489\n},\n{\n\"holders\": 1242,\n\"time\": 1722514771\n}\n]\n}",
+      "available_intervals": [],
+      "notes": [
+        "OHLCV data endpoint with customizable time intervals"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /pnl/{wallet}": {
+      "endpoint": "GET /pnl/{wallet}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-pnlwallet",
+      "method": "GET",
+      "path": "/pnl/{wallet}",
+      "description": "Gets Profit and Loss data for all positions of a wallet.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "wallet",
+          "type": "string",
+          "description": "The wallet identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"tokens\": {\n\"85tgA28eJCUwpTGkREdocDtkHCgZZySyrdv35w6opump\": {\n\"holding\": 34909.416624,\n\"held\": 402288.62697,\n\"sold\": 367379.210346,\n\"realized\": 48.24649003,\n\"unrealized\": 4665.26723313,\n\"total\": 4713.51372317,\n\"total_sold\": 1195.95048046,\n\"total_invested\": 1256.76208526,\n\"average_buy_amount\": 38.08369955,\n\"current_value\": 4774.3253279697965,\n\"cost_basis\": 0.00312403\n}\n},\n\"summary\": {\n\"realized\": 2418.42956164,\n\"unrealized\": -634.74038817,\n\"total\": 1783.68917347,\n\"totalInvested\": 103020.70911717,\n\"averageBuyAmount\": 1535.12073025,\n\"totalWins\": 222,\n\"totalLosses\": 295,\n\"winPercentage\": 34.8,\n\"lossPercentage\": 46.24\n}\n}",
+      "available_intervals": [],
+      "notes": [
+        "Profit and Loss calculation endpoint"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /first-buyers/{token}": {
+      "endpoint": "GET /first-buyers/{token}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-firstbuyerstoken",
+      "method": "GET",
+      "path": "/first-buyers/{token}",
+      "description": "",
+      "query_parameters": [
+        {
+          "name": "limit",
+          "type": "integer",
+          "description": "Number of first buyers to return",
+          "required": false
+        }
+      ],
+      "path_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /pnl/{wallet}/{token}": {
+      "endpoint": "GET /pnl/{wallet}/{token}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-pnlwallettoken",
+      "method": "GET",
+      "path": "/pnl/{wallet}/{token}",
+      "description": "Gets Profit and Loss data for a specific token in a wallet.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "wallet",
+          "type": "string",
+          "description": "The wallet identifier",
+          "required": true
+        },
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"holding\": 0,\n\"held\": 51095238.095238,\n\"sold\": 51095238.095238,\n\"sold_usd\": 776.90009082,\n\"realized\": 588.64143114,\n\"unrealized\": 0,\n\"total\": 588.64143114,\n\"total_sold\": 776.90009082,\n\"total_invested\": 188.25865968,\n\"average_buy_amount\": 188.25865968,\n\"current_value\": 0,\n\"cost_basis\": 0.00000368,\n\"first_buy_time\": 1743274275720,\n\"last_buy_time\": 1743274275720,\n\"last_sell_time\": 1743274299334,\n\"last_trade_time\": 1743274299334,\n\"buy_transactions\": 1,\n\"sell_transactions\": 1,\n\"total_transactions\": 2\n}",
+      "available_intervals": [],
+      "notes": [
+        "Profit and Loss calculation endpoint"
+      ],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /top-traders/all": {
+      "endpoint": "GET /top-traders/all",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-toptradersall",
+      "method": "GET",
+      "path": "/top-traders/all",
+      "description": "",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /top-traders/all/{page}": {
+      "endpoint": "GET /top-traders/all/{page}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-toptradersallpage",
+      "method": "GET",
+      "path": "/top-traders/all/{page}",
+      "description": "",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "page",
+          "type": "string",
+          "description": "The page identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /top-traders/{token}": {
+      "endpoint": "GET /top-traders/{token}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-toptraderstoken",
+      "method": "GET",
+      "path": "/top-traders/{token}",
+      "description": "",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /stats/{token}": {
+      "endpoint": "GET /stats/{token}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-statstoken",
+      "method": "GET",
+      "path": "/stats/{token}",
+      "description": "Gets detailed stats for a token or token-pool pair over various time intervals.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"1m\": {\n\"buyers\": 7,\n\"sellers\": 9,\n\"volume\": {\n\"buys\": 642.307406481682,\n\"sells\": 3071.093119714688,\n\"total\": 3713.4005261963716\n},\n\"transactions\": 102,\n\"buys\": 90,\n\"sells\": 12,\n\"wallets\": 14,\n\"price\": 0.0026899499819631667,\n\"priceChangePercentage\": 0.017543536395684036\n},\n\"5m\": {...},\n\"15m\": {...},\n\"24h\": {...}\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /stats/{token}/{pool}": {
+      "endpoint": "GET /stats/{token}/{pool}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-statstokenpool",
+      "method": "GET",
+      "path": "/stats/{token}/{pool}",
+      "description": "Gets detailed stats for a token or token-pool pair over various time intervals.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "The token identifier",
+          "required": true
+        },
+        {
+          "name": "pool",
+          "type": "string",
+          "description": "The pool identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"1m\": {\n\"buyers\": 7,\n\"sellers\": 9,\n\"volume\": {\n\"buys\": 642.307406481682,\n\"sells\": 3071.093119714688,\n\"total\": 3713.4005261963716\n},\n\"transactions\": 102,\n\"buys\": 90,\n\"sells\": 12,\n\"wallets\": 14,\n\"price\": 0.0026899499819631667,\n\"priceChangePercentage\": 0.017543536395684036\n},\n\"5m\": {...},\n\"15m\": {...},\n\"24h\": {...}\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /events/{tokenAddress}": {
+      "endpoint": "GET /events/{tokenAddress}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-eventstokenaddress",
+      "method": "GET",
+      "path": "/events/{tokenAddress}",
+      "description": "Gets raw event data for live processing. Returns binary data that needs to be decoded.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "tokenAddress",
+          "type": "string",
+          "description": "The tokenAddress identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"wallet\": \"8psNvWTrdNTiVRNzAgsou9kETXNJm2SXZyaKuJraVRtf\",\n\"amount\": 5.677347,\n\"priceUsd\": 10.472407812562192,\n\"volume\": 59.455493077426524,\n\"type\": \"sell\",\n\"time\": 1749298583015\n},\n{\n\"wallet\": \"7ACsEkYSvVyCE5AuYC6hP1bNs4SpgCDwsfm3UdnyPERk\",\n\"amount\": 2469629.599217,\n\"priceUsd\": 0.0000098468505465602,\n\"volume\": 245.0468505465602,\n\"type\": \"buy\",\n\"time\": 1749298314879\n}\n]",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /events/{tokenAddress}/{poolAddress}": {
+      "endpoint": "GET /events/{tokenAddress}/{poolAddress}",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-eventstokenaddresspooladdress",
+      "method": "GET",
+      "path": "/events/{tokenAddress}/{poolAddress}",
+      "description": "Gets raw event data for a specific token and pool. Returns binary data that needs to be decoded.",
+      "query_parameters": [],
+      "path_parameters": [
+        {
+          "name": "tokenAddress",
+          "type": "string",
+          "description": "The tokenAddress identifier",
+          "required": true
+        },
+        {
+          "name": "poolAddress",
+          "type": "string",
+          "description": "The poolAddress identifier",
+          "required": true
+        }
+      ],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    },
+    "GET /credits": {
+      "endpoint": "GET /credits",
+      "url": "https://docs.solanatracker.io/public-data-api/docs#get-credits",
+      "method": "GET",
+      "path": "/credits",
+      "description": "Gets the remaining API credits for your API key.",
+      "query_parameters": [],
+      "path_parameters": [],
+      "request_body": null,
+      "response_format": {},
+      "example_response": "{\n\"credits\": 9976168\n}",
+      "available_intervals": [],
+      "notes": [],
+      "pagination_supported": true,
+      "authentication_required": true
+    }
+  }
+}
